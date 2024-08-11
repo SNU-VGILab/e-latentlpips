@@ -21,7 +21,7 @@ pip install -e .
 ```
 or
 ```bash
-pip install git+
+pip install git+https://github.com/SNU-VGILab/e-latentlpips
 ```
 Training:
 ```bash
