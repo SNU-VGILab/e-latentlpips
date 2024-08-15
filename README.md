@@ -73,6 +73,7 @@ Download the pretrained model from [here](https://huggingface.co/alex4727/E-Late
 - Not many details were provided in the paper for the latent VGG network other than 3 removed maxpooling layers. We manually modified the VGG16 layers to reflect this.
 
 ## Notes
+- Check [here](https://github.com/SNU-VGILab/e-latentlpips/blob/f8298664e6c022290e8b321fb065f228b87e85dc/elatentlpips/models.py#L11) for the list of augmentations supported.
 - Inputs to VAE are expected to be scaled properly (check [utils.py](utils.py) for how they should be scaled).
 - The code uses mixed precision by default (and fp16 for VAE except for FLUX which uses bf16). 
 - The Latent VGG network was trained on 8xA6000 for ~ 5 days.
