@@ -43,7 +43,6 @@ def main(args):
     optimizer = torch.optim.Adam([source_tensors], lr=args.lr, betas=(0.9, 0.999))
 
     if args.lpips_domain == "pixel":
-        vae.decoder.requires_grad_(True)
         lpips_model = lpips.LPIPS(net='vgg').to(device=device)    
     else:
         target_tensors = vae.encode(target_tensors.to(vae.dtype)).latent_dist.sample()
